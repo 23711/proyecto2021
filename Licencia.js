@@ -4,8 +4,27 @@ const licencia = document.getElementById("lisencia");
 const form = document.querySelector('#form');
 const text = document.getElementById("text");
 
+/*function identify(p){
+    let message = p ;
+    let enter = false;
+    let comeIn = false;
+
+    if (licencia.value.length < 5) {
+        p += "licencia "
+        entrar = true;
+        if(password.value.length > 7){
+            en = true;
+        }
+    }
+}
+
+
+*/
 form.addEventListener("submit",(event) => {
     event.preventDefault()
+    identify("No es valido tu ")
+
+
     let p = "No es valido tu ";
     let entrar = false;
     let en = false;
