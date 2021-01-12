@@ -42,7 +42,7 @@ form .div{
 }
 
 
-.section-imput {
+.section-input {
     width: 100%;
     background: none;
     color: #c6c6c6;
@@ -55,7 +55,7 @@ form .div{
 }
 
 
-.section-imput:focus{
+.section-input:focus{
     outline: none;
     columns: #5e5d5d;
 }
@@ -75,7 +75,7 @@ input:valid~label{
     font-size: 12px;
 
 }
-.ligne::before{
+.linea::before{
     content: "";
     height: 2px;
     width: 0%;
@@ -86,7 +86,7 @@ input:valid~label{
     left: 0;
 }
 
-input:focus~.ligne::before{
+input:focus~.linea::before{
     width: 100%;
 }
 
