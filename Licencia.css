@@ -122,12 +122,6 @@ p {
     font-size: 16px;
 }
 
-.validacion {
-    position: absolute;
-    color: red;
-    font-size: 1rem;
-}
-
 footer{
     height: 10rem;
     background: var(--colorfont);
