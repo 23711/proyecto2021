@@ -3,7 +3,9 @@ const user = document.getElementById("user");
 const password = document.getElementById("password");
 const form = document.querySelector('form');
 const parrafo = document.getElementsByName('parrafo');
-var entrar = false
+var entrada1 = false
+var entrada2 = false
+var entrada3 = false
 
 
 
@@ -13,22 +15,25 @@ function validacion(obj, num ,p)
     if (obj.value.length >= num) {
         autorisado = true
         parrafo[p].classList.remove('no')
-        } else {
-            entrar = true
-        }
+        return true
+        } 
     if (!autorisado) {
         parrafo[p].classList.add('no')
-        entrar = true
+        return false
     }
+    
 }
 
 form.addEventListener('submit', (eve) => {
     eve.preventDefault();
-    validacion(licencia,5,0)
-    validacion(user,7,1)
-    validacion(password, 6,2)
-    if (entrar) {
-        console.log('goooooo')
+    entrada1 = validacion(licencia,5,0)
+    entrada2 = validacion(user,7,1)
+    entrada3 = validacion(password, 6,2)
+    if (entrada1 && entrada2 && entrada3) {
+        console.log('goooddddd')
+        //fetch() aquie va el fech
     }
+
 })
+
 
