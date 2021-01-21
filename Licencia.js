@@ -30,8 +30,15 @@ form.addEventListener('submit', (eve) => {
     entrada2 = validacion(user,7,1)
     entrada3 = validacion(password, 6,2)
     if (entrada1 && entrada2 && entrada3) {
-        console.log('goooddddd')
-        //fetch() aquie va el fech
+        console.log('good')
+        fetch('/login')
+        
+
+        licencia.value = ''
+        user.value = ''
+        password.value = ''
+    }else{
+        
     }
 
 })
