@@ -32,13 +32,17 @@ form.addEventListener('submit', (eve) => {
     if (entrada1 && entrada2 && entrada3) {
         console.log('good')
         const formData = new FormData(form)
+        const options = {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }
         //debugger
         // forData.set("key",nuervo dato)
-        fetch('/',{                     //
-            method: 'POST',             // se va enviar como multiPar forData
-            body: formData,             //ve a la consola 
-                                    //npm install body-parser 
-        })
+
+        fetch('/',options)
 
         licencia.value = ''
         user.value = ''
