@@ -30,27 +30,28 @@ form.addEventListener('submit', (eve) => {
     entrada2 = validacion(user,7,1)
     entrada3 = validacion(password, 6,2)
     if (entrada1 && entrada2 && entrada3) {
-        console.log('good')
         const formData = new FormData(form)
+        const Usuario = {
+            licenciaUser: formData.get('licencia'),
+            nombreDelUsari: formData.get('usario'),
+            contrasena: formData.get('password')
+        }
         const options = {
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(Usuario)
         }
-        //debugger
-        // forData.set("key",nuervo dato)
+        
+        formData.get('licencia')
 
-        fetch('/',options)
+        fetch('/login',options)
 
         licencia.value = ''
         user.value = ''
         password.value = ''
-    }else{
-        
     }
-
 })
 
 
