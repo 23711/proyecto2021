@@ -51,7 +51,7 @@ form.addEventListener('submit', (eve) => {
         licencia.value = ''
         user.value = ''
         password.value = ''
-    }
+    } 
 })
 
 
