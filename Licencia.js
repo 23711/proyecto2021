@@ -3,6 +3,7 @@ const user = document.getElementById("user");
 const password = document.getElementById("password");
 const form = document.querySelector('#form');
 const parrafo = document.getElementsByName('parrafo');
+const textError = document.getElementById('text');
 var entrada1 = false
 var entrada2 = false
 var entrada3 = false
@@ -43,14 +44,20 @@ form.addEventListener('submit', (eve) => {
             },
             body: JSON.stringify(Usuario)
         }
-        
-        formData.get('licencia')
-
         fetch('/login',options)
-
-        licencia.value = ''
-        user.value = ''
-        password.value = ''
+        .then(function(response){
+            if (response.status === 200) {
+                window.location.href = '/menu'
+            }
+        })
+        .catch(function(err){
+            licencia.value = ''
+            user.value = ''
+            password.value = ''
+            textError.innerHTML = 'Tu usario no es valido'
+        })
+    } else {
+        textError.innerHTML = 'Tu usario no es valido'
     } 
 })
 
