@@ -51,6 +51,7 @@ form.addEventListener('submit', (eve) => {
             }
         })
         .catch(function(err){
+            console.log(err)
             licencia.value = ''
             user.value = ''
             password.value = ''
