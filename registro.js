@@ -1,1 +1,1 @@
-const inputUser
+const inputUser = document.getElementsByName('')
